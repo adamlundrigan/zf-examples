@@ -6,6 +6,18 @@ Quick example to illustrate one possible way to use Zend\Di from Zend Framework 
 ### Why? ###
 Zend Framework 2.0.0dev3 was released this week with a first official look at the Dependency Injection component; I figured i'd spend some time kicking it's tires, and this is the result. 
 
+### Usage? ###
+
+* Fetch the latest ZF2 snapshot (`git clone https://github.com/zendframework/zf2.git`)
+* Make sure you have Zend Framework v1.11.x on your PHP `include_path`
+* Clone this repo somewhere into your webroot
+* Edit public/.htaccess and set ZF2_LIBRARY_PATH to the `library` folder of your local copy of ZF2
+* Fire up your web browser and go to 
+        
+            http://your-host/path/to/zf-examples/zf2-di-in-zf1/public
+
+  And it should work! (hopefully)
+
 ### Resources ###
 Some goodies made by other people, just for you
 
