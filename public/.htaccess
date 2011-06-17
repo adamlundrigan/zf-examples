@@ -1,4 +1,4 @@
-php_value include_path ".:/usr/local/apache2/htdocs/lib/ZendFramework/library:/usr/local/apache2/htdocs/lib/zf2/library"
+SetEnv ZF2_LIBRARY_PATH "/usr/local/apache2/htdocs/lib/zf2/library/"
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} -s [OR]

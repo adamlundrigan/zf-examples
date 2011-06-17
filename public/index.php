@@ -1,5 +1,9 @@
 <?php
 
+// Define path to ZF2 library
+defined('ZF2_LIBRARY_PATH')
+    || define('ZF2_LIBRARY_PATH', (getenv('ZF2_LIBRARY_PATH') ? getenv('ZF2_LIBRARY_PATH') : ''));
+
 // Define path to application directory
 defined('APPLICATION_PATH')
     || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../application'));
