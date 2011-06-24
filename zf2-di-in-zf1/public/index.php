@@ -2,7 +2,7 @@
 
 // Define path to ZF2 library
 defined('ZF2_LIBRARY_PATH')
-    || define('ZF2_LIBRARY_PATH', (getenv('ZF2_LIBRARY_PATH') ? getenv('ZF2_LIBRARY_PATH') : ''));
+    || define('ZF2_LIBRARY_PATH', (getenv('ZF2_LIBRARY_PATH') ?: ''));
 
 // Define path to application directory
 defined('APPLICATION_PATH')
@@ -10,7 +10,7 @@ defined('APPLICATION_PATH')
 
 // Define application environment
 defined('APPLICATION_ENV')
-    || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
+    || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ?: 'production'));
 
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
