@@ -40,7 +40,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         // Instantiate DependencyInjector
         $di = new Zend\Di\DependencyInjector();      
         $di->setDefinition($definitions);
-        $di->getInstanceManager()->setProperty('DiTest\ObjectTwo', 'id', 'FixedId');
+        
+        $im = $di->getInstanceManager();
+        $im->setParameters('DiTest\ObjectTwo', array('id'=>'FixedId'));
 
         return $di;
     }
