@@ -11,6 +11,11 @@ class IndexController extends Zend_Controller_Action
     public function indexAction()
     {
         echo "<pre>";
+        echo "get('DiTest\ObjectTwo'):\n";
+        echo $this->di->get('DiTest\ObjectTwo') . "\n\n";
+        echo "newInstance('DiTest\ObjectTwo'):\n";
+        echo $this->di->newInstance('DiTest\ObjectTwo') . "\n\n";
+        echo "\n\n";
         echo "get('DiTest\ObjectOne'):\n";
         echo $this->di->get('DiTest\ObjectOne') . "\n\n";
         echo "get('DiTest\ObjectOne'):\n";
@@ -19,9 +24,6 @@ class IndexController extends Zend_Controller_Action
         echo $this->di->newInstance('DiTest\ObjectOne') . "\n\n";
         echo "get('DiTest\ObjectOne'):\n";
         echo $this->di->get('DiTest\ObjectOne') . "\n\n";
-        echo "\n\n";
-        echo "get('DiTest\ObjectTwo'):\n";
-        echo $this->di->get('DiTest\ObjectTwo') . "\n\n";
         echo "</pre>";
     }
 
