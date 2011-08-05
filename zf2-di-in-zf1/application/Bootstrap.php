@@ -22,7 +22,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         // hacked to force loading from specific tree (ZF2_DIR)
         spl_autoload_register(function($class){
             if (strpos($class, 'Zend') !== 0 || strpos($class, '\\') === false) return;
-            $file = ZF2_LIBRARY_PATH . str_replace(array('\\','_'), DIRECTORY_SEPARATOR, $class) . '.php';
+            $file = ZF2_LIBRARY_PATH . DIRECTORY_SEPARATOR . str_replace(array('\\','_'), DIRECTORY_SEPARATOR, $class) . '.php';
             return ( false !== file_exists($file) )
                 ? include_once($file)
                 : false;
