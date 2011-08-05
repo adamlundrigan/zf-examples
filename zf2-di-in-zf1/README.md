@@ -8,10 +8,10 @@ Zend Framework 2.0.0dev3 was released this week with a first official look at th
 
 ### Usage? ###
 
-* Fetch the latest ZF2 snapshot (`git clone https://github.com/zendframework/zf2.git`)
+* Fetch the ZF2 release 2.0.0dev3 (https://github.com/zendframework/zf2/tree/release-2.0.0dev3)
 * Make sure you have Zend Framework v1.11.x on your PHP `include_path`
 * Clone this repo somewhere into your webroot
-* Edit public/.htaccess and set ZF2_LIBRARY_PATH to the `library` folder of your local copy of ZF2
+* Copy `public/.htaccess.dist` to `public/.htaccess` and set ZF2_LIBRARY_PATH to the `library` folder of your local copy of ZF2 v2.0.0dev3
 * Fire up your web browser and go to 
         
             http://your-host/path/to/zf-examples/zf2-di-in-zf1/public
