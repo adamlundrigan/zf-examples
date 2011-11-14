@@ -13,7 +13,7 @@ class My_ResourceInjector extends Zend_Controller_Action_Helper_Abstract
     {
         $this->_resources = $resources;
     }
- 
+
     public function preDispatch()
     {
         $bootstrap  = $this->getBootstrap();
@@ -24,7 +24,7 @@ class My_ResourceInjector extends Zend_Controller_Action_Helper_Abstract
             }
         }
     }
- 
+
     public function getBootstrap()
     {
         return $this->getFrontController()->getParam('bootstrap');

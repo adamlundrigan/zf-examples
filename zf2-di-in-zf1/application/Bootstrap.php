@@ -2,10 +2,10 @@
 
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
-    
+
     /**
      * Initializing Dependency Injection
-     * @return Zend\Di\DependencyInjector 
+     * @return Zend\Di\DependencyInjector
      */
     public function _initDi()
     {
@@ -17,7 +17,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
                 ? include_once($file)
                 : false;
         });
-        
+
         // Autoload namespaced Zend classes from ZF2
         // hacked to force loading from specific tree (ZF2_DIR)
         spl_autoload_register(function($class){
@@ -36,22 +36,22 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
             )
         );
         $definitions = $compiler->compile();
-        
+
         // Instantiate DependencyInjector
-        $di = new Zend\Di\DependencyInjector();      
+        $di = new Zend\Di\DependencyInjector();
         $di->setDefinition($definitions);
         $di->getInstanceManager()->setProperty('DiTest\ObjectTwo', 'id', 'FixedId');
 
         return $di;
     }
-    
+
     /**
      * Set up resource injector
      * @see http://weierophinney.net/matthew/archives/235-A-Simple-Resource-Injector-for-ZF-Action-Controllers.html
      */
     protected function _initResourceInjector()
     {
-        $this->bootstrap('di');        
+        $this->bootstrap('di');
         Zend_Controller_Action_HelperBroker::addHelper(
             new My_ResourceInjector(array(
                 'di'
